@@ -1,0 +1,113 @@
+{
+  "matchInfo": {
+    "homeTeam": "",
+    "awayTeam": "",
+    "date": "",
+    "time": "",
+    "stage": "",
+    "groupOrRound": "",
+    "venue": "",
+    "homeNeutralAway": ""
+  },
+  "dataSummary": {
+    "confirmedData": [],
+    "missingData": [],
+    "lastUpdated": "",
+    "confidenceLevel": "high/medium/low"
+  },
+  "dataEvidence": [
+    {
+      "field": "",
+      "valueOrConclusion": "",
+      "sourceName": "",
+      "sourceDate": "",
+      "confidence": "high/medium/low/missing",
+      "modelImpact": []
+    }
+  ],
+  "teamModel": {
+    "home": {
+      "attackStrength": 0,
+      "defensiveStability": 0,
+      "transitionSpeed": 0,
+      "pressingIntensity": 0,
+      "possessionControl": 0,
+      "setPieceThreat": 0,
+      "goalkeeperImpact": 0,
+      "staminaProfile": 0,
+      "tacticalCoherence": 0,
+      "volatility": 0,
+      "parameterRationale": []
+    },
+    "away": {
+      "attackStrength": 0,
+      "defensiveStability": 0,
+      "transitionSpeed": 0,
+      "pressingIntensity": 0,
+      "possessionControl": 0,
+      "setPieceThreat": 0,
+      "goalkeeperImpact": 0,
+      "staminaProfile": 0,
+      "tacticalCoherence": 0,
+      "volatility": 0,
+      "parameterRationale": []
+    }
+  },
+  "probability": {
+    "homeWin": 0,
+    "draw": 0,
+    "awayWin": 0,
+    "mainDrivers": []
+  },
+  "scoreDistribution": [
+    {
+      "score": "",
+      "probability": 0,
+      "matchScript": ""
+    }
+  ],
+  "tacticalMatchups": [
+    {
+      "zone": "",
+      "matchup": "",
+      "advantage": "",
+      "forecastImpact": ""
+    }
+  ],
+  "highThreatSequences": [
+    {
+      "startMinute": 0,
+      "endMinute": 0,
+      "team": "",
+      "attackType": "",
+      "threatLevel": 0,
+      "initiation": "",
+      "progression": "",
+      "keyAction": "",
+      "defensiveResponse": "",
+      "finish": "",
+      "rationale": ""
+    }
+  ],
+  "goalChains": [
+    {
+      "minuteRange": "",
+      "team": "",
+      "goalMethod": "",
+      "xgQuality": "high/medium/low",
+      "defensiveError": "",
+      "initiation": "",
+      "progression": "",
+      "keyAction": "",
+      "finish": "",
+      "rationale": ""
+    }
+  ],
+  "uncertaintyFactors": [
+    {
+      "factor": "",
+      "impact": "",
+      "affectedSections": []
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "dataEvidence": [
+    {
+      "field": "比赛时间与场地",
+      "valueOrConclusion": "",
+      "sourceName": "",
+      "sourceDate": "",
+      "confidence": "high/medium/low/missing",
+      "modelImpact": [
+        "staminaProfile",
+        "tacticalCoherence"
+      ]
+    },
+    {
+      "field": "近5到10场进失球与xG/xGA",
+      "valueOrConclusion": "",
+      "sourceName": "",
+      "sourceDate": "",
+      "confidence": "high/medium/low/missing",
+      "modelImpact": [
+        "attackStrength",
+        "defensiveStability",
+        "volatility"
+      ]
+    },
+    {
+      "field": "预计首发、阵型、伤停",
+      "valueOrConclusion": "",
+      "sourceName": "",
+      "sourceDate": "",
+      "confidence": "high/medium/low/missing",
+      "modelImpact": [
+        "tacticalCoherence",
+        "pressingIntensity",
+        "goalkeeperImpact"
+      ]
+    },
+    {
+      "field": "战术倾向",
+      "valueOrConclusion": "",
+      "sourceName": "",
+      "sourceDate": "",
+      "confidence": "high/medium/low/missing",
+      "modelImpact": [
+        "possessionControl",
+        "transitionSpeed",
+        "setPieceThreat"
+      ]
+    }
+  ]
+}

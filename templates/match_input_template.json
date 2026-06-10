@@ -1,0 +1,38 @@
+{
+  "match": {
+    "homeTeam": "",
+    "awayTeam": "",
+    "date": "",
+    "time": "",
+    "stage": "",
+    "groupOrRound": "",
+    "venue": "",
+    "homeNeutralAway": "home/neutral/away"
+  },
+  "availableData": {
+    "recentMatches": [],
+    "goalsForAgainst": [],
+    "xgXga": [],
+    "shotsAndChances": [],
+    "injuries": [],
+    "suspensions": [],
+    "expectedLineups": [],
+    "formations": [],
+    "playerForm": [],
+    "goalkeeperForm": [],
+    "tacticalNotes": [],
+    "setPieces": [],
+    "restDays": [],
+    "travelWeather": [],
+    "tableContext": []
+  },
+  "outputFocus": [
+    "胜平负概率",
+    "比分分布",
+    "关键战术对位",
+    "高威胁回合预测",
+    "进球链路拆解",
+    "不确定性因素"
+  ],
+  "languageStyle": "专业、具体、使用足球战术术语"
+}

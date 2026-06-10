@@ -1,0 +1,151 @@
+{
+  "matchInfo": {
+    "homeTeam": "墨西哥",
+    "awayTeam": "加拿大",
+    "date": "2026-06-08",
+    "time": "02:00 UTC",
+    "stage": "小组赛",
+    "groupOrRound": "A组",
+    "venue": "瓜达拉哈拉球场",
+    "homeNeutralAway": "home"
+  },
+  "dataSummary": {
+    "confirmedData": [
+      "示例赛程信息"
+    ],
+    "missingData": [
+      "最新伤停",
+      "预计首发",
+      "近5场xG/xGA",
+      "门将近期扑救数据"
+    ],
+    "lastUpdated": "示例数据，正式使用前需核验",
+    "confidenceLevel": "low"
+  },
+  "dataEvidence": [
+    {
+      "field": "比赛时间与场地",
+      "valueOrConclusion": "2026-06-08 02:00 UTC，瓜达拉哈拉球场",
+      "sourceName": "示例数据",
+      "sourceDate": "待核验",
+      "confidence": "low",
+      "modelImpact": [
+        "staminaProfile",
+        "tacticalCoherence"
+      ]
+    }
+  ],
+  "teamModel": {
+    "home": {
+      "attackStrength": 74,
+      "defensiveStability": 72,
+      "transitionSpeed": 71,
+      "pressingIntensity": 70,
+      "possessionControl": 76,
+      "setPieceThreat": 70,
+      "goalkeeperImpact": 68,
+      "staminaProfile": 72,
+      "tacticalCoherence": 74,
+      "volatility": 64,
+      "parameterRationale": [
+        "示例建模：墨西哥更偏控球推进和边路配合。"
+      ]
+    },
+    "away": {
+      "attackStrength": 72,
+      "defensiveStability": 70,
+      "transitionSpeed": 78,
+      "pressingIntensity": 68,
+      "possessionControl": 68,
+      "setPieceThreat": 69,
+      "goalkeeperImpact": 70,
+      "staminaProfile": 73,
+      "tacticalCoherence": 70,
+      "volatility": 72,
+      "parameterRationale": [
+        "示例建模：加拿大更依赖转换速度和身后空间。"
+      ]
+    }
+  },
+  "probability": {
+    "homeWin": 43,
+    "draw": 29,
+    "awayWin": 28,
+    "mainDrivers": [
+      "墨西哥主场与控球控制略占优势",
+      "加拿大转换速度提高客胜尾部概率",
+      "最新阵容和xG数据缺失，整体置信度较低"
+    ]
+  },
+  "scoreDistribution": [
+    {
+      "score": "1-1",
+      "probability": 13,
+      "matchScript": "墨西哥控球推进，加拿大通过反击回应。"
+    },
+    {
+      "score": "2-1",
+      "probability": 11,
+      "matchScript": "墨西哥边路和定位球各制造一次高质量机会。"
+    },
+    {
+      "score": "1-2",
+      "probability": 9,
+      "matchScript": "加拿大抓住墨西哥阵线前压后的身后空间。"
+    }
+  ],
+  "tacticalMatchups": [
+    {
+      "zone": "墨西哥右路",
+      "matchup": "边后卫套上 vs 加拿大弱侧回收",
+      "advantage": "墨西哥",
+      "forecastImpact": "可能制造倒三角或后点传中机会。"
+    },
+    {
+      "zone": "墨西哥防线身后",
+      "matchup": "加拿大转换速度 vs 墨西哥rest-defense",
+      "advantage": "加拿大",
+      "forecastImpact": "加拿大最主要的进球路径。"
+    }
+  ],
+  "highThreatSequences": [
+    {
+      "startMinute": 21,
+      "endMinute": 25,
+      "team": "墨西哥",
+      "attackType": "倒三角回传",
+      "threatLevel": 71,
+      "initiation": "墨西哥通过中场连续传导将加拿大防线吸到右侧。",
+      "progression": "右边后卫外侧套上，右边锋内收占据半空间。",
+      "keyAction": "底线附近回传到禁区弧顶。",
+      "defensiveResponse": "加拿大后腰回收慢半拍，中卫没有完全前顶。",
+      "finish": "禁区弧顶射门被门将扑出。",
+      "rationale": "墨西哥possessionControl略高，能通过横向传导制造局部空当。"
+    }
+  ],
+  "goalChains": [
+    {
+      "minuteRange": "58-62",
+      "team": "加拿大",
+      "goalMethod": "低位反击",
+      "xgQuality": "medium",
+      "defensiveError": "墨西哥rest-defense人数不足",
+      "initiation": "加拿大后场拦截墨西哥横传。",
+      "progression": "第一脚纵向传球找到中路支点，弱侧边锋高速前插。",
+      "keyAction": "中锋背身回做后直塞边后卫身后。",
+      "finish": "禁区左侧低射远角得分。",
+      "rationale": "加拿大transitionSpeed高于墨西哥回追速度。"
+    }
+  ],
+  "uncertaintyFactors": [
+    {
+      "factor": "预计首发缺失",
+      "impact": "会改变边路速度、压迫强度和禁区占位判断。",
+      "affectedSections": [
+        "teamModel",
+        "highThreatSequences",
+        "goalChains"
+      ]
+    }
+  ]
+}
