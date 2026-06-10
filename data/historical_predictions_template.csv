@@ -1,0 +1,2 @@
+matchDate,competition,homeTeam,awayTeam,predictedHomeGoals,predictedAwayGoals,homeWin,draw,awayWin,topScore1,topScore1Probability,actualHomeGoals,actualAwayGoals,result,xgInputTier,availabilityNotes,specialFactorNotes,closingHomeOdds,closingDrawOdds,closingAwayOdds
+2026-06-10,Friendly,Portugal,Nigeria,2.14,0.50,0.731,0.187,0.082,2-0,0.163,,,,proxy_xG,"Portugal Leao out; Nigeria Osimhen/Lookman out","friendly; moderate card risk",1.25,5.50,11.00

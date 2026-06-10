@@ -4,14 +4,18 @@
     "awayTeam": "",
     "date": "",
     "time": "",
+    "competition": "",
     "stage": "",
     "groupOrRound": "",
     "venue": "",
-    "homeNeutralAway": ""
+    "homeNeutralAway": "",
+    "predictionTimestamp": ""
   },
   "dataSummary": {
     "confirmedData": [],
+    "assumptions": [],
     "missingData": [],
+    "staleData": [],
     "lastUpdated": "",
     "confidenceLevel": "high/medium/low"
   },
@@ -20,11 +24,66 @@
       "field": "",
       "valueOrConclusion": "",
       "sourceName": "",
+      "sourceUrlOrId": "",
       "sourceDate": "",
+      "freshness": "fresh/stale/unknown",
       "confidence": "high/medium/low/missing",
       "modelImpact": []
     }
   ],
+  "modelAssumptions": {
+    "modelType": "Poisson/Dixon-Coles-style score matrix",
+    "sampleWindow": "",
+    "dataCutoff": "",
+    "xgInputTier": "direct_xG/proxy_xG/goals_regressed_xG/strength_prior_only",
+    "xgFallbackNotes": [],
+    "homeExpectedGoals": 0,
+    "awayExpectedGoals": 0,
+    "homeAvailabilityGoalAdjustment": 0,
+    "awayAvailabilityGoalAdjustment": 0,
+    "availabilityNotes": [],
+    "specialFactors": {
+      "homeGoalAdjustment": 0,
+      "awayGoalAdjustment": 0,
+      "tempoMultiplier": 1,
+      "volatilityDelta": 0,
+      "notes": []
+    },
+    "tacticalFactors": {
+      "homeGoalAdjustment": 0,
+      "awayGoalAdjustment": 0,
+      "volatilityDelta": 0,
+      "notes": []
+    },
+    "lambdaDrivers": [],
+    "calibration": {
+      "temperature": 1,
+      "backtestWindow": "",
+      "brier": 0,
+      "logLoss": 0,
+      "ece": 0,
+      "calibrationSource": ""
+    },
+    "publicConsensusCalibration": {
+      "enabled": false,
+      "stage": "",
+      "favoriteShrink": 0,
+      "drawBoost": 0,
+      "underdogBoost": 0,
+      "notes": []
+    },
+    "marketCheck": {
+      "available": false,
+      "source": "",
+      "vigFreeProbability": {
+        "homeWin": 0,
+        "draw": 0,
+        "awayWin": 0
+      },
+      "modelMarketDifferences": []
+    },
+    "calibrationNotes": []
+  },
   "teamModel": {
     "home": {
       "attackStrength": 0,

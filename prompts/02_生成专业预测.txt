@@ -1,33 +1,52 @@
 请基于上一步整理出的数据，生成专业足球赛前预测报告。
 
-必须输出以下 8 个部分：
+必须输出以下 9 个部分：
 
 1. 数据输入摘要
-2. 球队参数建模
-3. 胜平负概率
-4. 比分分布
-5. 关键战术对位
-6. 高威胁回合预测
-7. 进球链路拆解
-8. 不确定性因素
+2. 模型假设与数据质量
+3. 球队参数建模
+4. 胜平负概率
+5. 比分分布
+6. 关键战术对位
+7. 高威胁回合预测
+8. 进球链路拆解
+9. 不确定性因素
+
+模型假设要求：
+- 明确数据截止时间、样本窗口和缺失项。
+- 列出两队期望进球：home_lambda / away_lambda。
+- 标注 xG 输入层级：direct_xG、proxy_xG、goals_regressed_xG 或 strength_prior_only。
+- 说明期望进球如何由近期 xG、赛季基线、对手防守、Elo/排名、阵容、主客/中立、休息和战术调整得到。
+- 必须说明能上场人数/缺阵主力如何进入 homeAvailabilityGoalAdjustment / awayAvailabilityGoalAdjustment。
+- 必须说明常规主力比例、俱乐部过去一年表现、连续比赛强度如何影响 staminaProfile 和 tacticalCoherence。
+- 必须说明每场特殊因素如何进入 goalAdjustment、tempoMultiplier、volatilityDelta。
+- 必须说明临场指挥、替补深度、定位球攻防、点球/VAR 如何进入 tacticalMatchGoalAdjustment 和 volatility。
+- 如果有历史回测或同赛事校准结果，给出 temperature、Brier、log loss、ECE；没有则写缺失，不要假造。
+- 如果使用大众/历届世界杯预测偏差校准，必须说明 favoriteShrink、drawBoost、underdogBoost，以及这是保守先验不是当前比赛事实。
+- 如果没有 direct xG，必须展示替代计算：射门、射正、重大机会、禁区射门如何转成 proxy_xG，或进球率如何回归到均值。
+- 如果有市场赔率，给出去水后的市场隐含概率，并说明是否用于校准。
+- 如果模型概率和市场概率任一项差异超过 8 个百分点，必须解释。
 
 球队参数建模要求：
 - 将两队转换成 0-100 参数。
 - 参数包括 attackStrength、defensiveStability、transitionSpeed、pressingIntensity、possessionControl、setPieceThreat、goalkeeperImpact、staminaProfile、tacticalCoherence、volatility。
-- 每个关键参数必须说明依据。
+- 每个关键参数必须说明依据，不能凭感觉打分。
 
 概率要求：
 - 主胜、平局、客胜必须合计 100%。
-- 概率解释必须绑定至少 3 类数据依据。
+- 概率解释必须绑定至少 4 类数据依据。
 - 不要只给结论，要说明哪些变量推高或压低概率。
+- 概率应来自 Poisson / Dixon-Coles 风格比分矩阵或等价蒙特卡洛模拟。
 
 比分分布要求：
-- 给 3 到 5 个最可能比分。
+- 给 3 到 7 个最可能比分。
 - 每个比分必须说明对应比赛脚本。
 - 比分分布必须和后面的事件流一致。
 
 战术对位要求：
 - 明确哪条边、哪个半空间、哪种压迫/反击模式最关键。
+- 如果红黄牌、球场、天气、海拔或动机因素重要，必须进入战术对位和事件流。
+- 如果定位球或点球因素重要，事件流必须包含至少一个定位球/点球风险回合，但不能把点球写成确定发生。
 - 使用专业术语：半空间、肋部、rest-defense、反压迫、压迫触发点、弱侧转移、倒三角、二点球、低位防守、禁区占位等。
 
 事件流要求：

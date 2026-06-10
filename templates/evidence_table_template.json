@@ -4,7 +4,9 @@
       "field": "比赛时间与场地",
       "valueOrConclusion": "",
       "sourceName": "",
+      "sourceUrlOrId": "",
       "sourceDate": "",
+      "freshness": "fresh/stale/unknown",
       "confidence": "high/medium/low/missing",
       "modelImpact": [
         "staminaProfile",
@@ -15,7 +17,9 @@
       "field": "近5到10场进失球与xG/xGA",
       "valueOrConclusion": "",
       "sourceName": "",
+      "sourceUrlOrId": "",
       "sourceDate": "",
+      "freshness": "fresh/stale/unknown",
       "confidence": "high/medium/low/missing",
       "modelImpact": [
         "attackStrength",
@@ -27,7 +31,9 @@
       "field": "预计首发、阵型、伤停",
       "valueOrConclusion": "",
       "sourceName": "",
+      "sourceUrlOrId": "",
       "sourceDate": "",
+      "freshness": "fresh/stale/unknown",
       "confidence": "high/medium/low/missing",
       "modelImpact": [
         "tacticalCoherence",
@@ -39,12 +45,28 @@
       "field": "战术倾向",
       "valueOrConclusion": "",
       "sourceName": "",
+      "sourceUrlOrId": "",
       "sourceDate": "",
+      "freshness": "fresh/stale/unknown",
       "confidence": "high/medium/low/missing",
       "modelImpact": [
         "possessionControl",
         "transitionSpeed",
         "setPieceThreat"
+      ]
+    },
+    {
+      "field": "Elo/排名/市场赔率",
+      "valueOrConclusion": "",
+      "sourceName": "",
+      "sourceUrlOrId": "",
+      "sourceDate": "",
+      "freshness": "fresh/stale/unknown",
+      "confidence": "high/medium/low/missing",
+      "modelImpact": [
+        "attackStrength",
+        "defensiveStability",
+        "volatility"
       ]
     }
   ]

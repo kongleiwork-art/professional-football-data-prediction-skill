@@ -4,30 +4,39 @@
     "awayTeam": "加拿大",
     "date": "2026-06-08",
     "time": "02:00 UTC",
+    "competition": "示例赛事",
     "stage": "小组赛",
     "groupOrRound": "A组",
-    "venue": "瓜达拉哈拉球场",
-    "homeNeutralAway": "home"
+    "venue": "示例球场",
+    "homeNeutralAway": "home",
+    "predictionTimestamp": "示例数据，正式使用前需核验"
   },
   "dataSummary": {
     "confirmedData": [
       "示例赛程信息"
     ],
+    "assumptions": [
+      "未联网核验，参数仅展示结构"
+    ],
     "missingData": [
       "最新伤停",
       "预计首发",
       "近5场xG/xGA",
+      "市场赔率",
       "门将近期扑救数据"
     ],
+    "staleData": [],
     "lastUpdated": "示例数据，正式使用前需核验",
     "confidenceLevel": "low"
   },
   "dataEvidence": [
     {
       "field": "比赛时间与场地",
-      "valueOrConclusion": "2026-06-08 02:00 UTC，瓜达拉哈拉球场",
+      "valueOrConclusion": "2026-06-08 02:00 UTC，示例球场",
       "sourceName": "示例数据",
+      "sourceUrlOrId": "internal-example",
       "sourceDate": "待核验",
+      "freshness": "unknown",
       "confidence": "low",
       "modelImpact": [
         "staminaProfile",
@@ -35,6 +44,31 @@
       ]
     }
   ],
+  "modelAssumptions": {
+    "modelType": "Poisson-style score matrix",
+    "sampleWindow": "缺失，示例参数",
+    "dataCutoff": "待核验",
+    "homeExpectedGoals": 1.42,
+    "awayExpectedGoals": 1.18,
+    "lambdaDrivers": [
+      "墨西哥主场/环境示例加成",
+      "加拿大转换速度提高客队进球尾部概率",
+      "xG和首发缺失导致置信度低"
+    ],
+    "marketCheck": {
+      "available": false,
+      "source": "",
+      "vigFreeProbability": {
+        "homeWin": 0,
+        "draw": 0,
+        "awayWin": 0
+      },
+      "modelMarketDifferences": []
+    },
+    "calibrationNotes": [
+      "缺少赔率，未做市场校准"
+    ]
+  },
   "teamModel": {
     "home": {
       "attackStrength": 74,
@@ -69,29 +103,29 @@
   },
   "probability": {
     "homeWin": 43,
-    "draw": 29,
-    "awayWin": 28,
+    "draw": 28,
+    "awayWin": 29,
     "mainDrivers": [
       "墨西哥主场与控球控制略占优势",
       "加拿大转换速度提高客胜尾部概率",
-      "最新阵容和xG数据缺失，整体置信度较低"
+      "最新阵容、赔率和xG数据缺失，整体置信度较低"
     ]
   },
   "scoreDistribution": [
     {
       "score": "1-1",
-      "probability": 13,
+      "probability": 12,
       "matchScript": "墨西哥控球推进，加拿大通过反击回应。"
     },
     {
-      "score": "2-1",
-      "probability": 11,
-      "matchScript": "墨西哥边路和定位球各制造一次高质量机会。"
+      "score": "1-0",
+      "probability": 10,
+      "matchScript": "墨西哥控制节奏并守住低比分优势。"
     },
     {
-      "score": "1-2",
+      "score": "2-1",
       "probability": 9,
-      "matchScript": "加拿大抓住墨西哥阵线前压后的身后空间。"
+      "matchScript": "墨西哥边路和定位球各制造一次高质量机会。"
     }
   ],
   "tacticalMatchups": [
@@ -139,10 +173,12 @@
   ],
   "uncertaintyFactors": [
     {
-      "factor": "预计首发缺失",
-      "impact": "会改变边路速度、压迫强度和禁区占位判断。",
+      "factor": "预计首发、xG和赔率缺失",
+      "impact": "会改变边路速度、压迫强度、期望进球和市场校准判断。",
       "affectedSections": [
         "teamModel",
+        "modelAssumptions",
+        "probability",
         "highThreatSequences",
         "goalChains"
       ]

@@ -5,6 +5,7 @@
 - matchInfo
 - dataSummary
 - dataEvidence
+- modelAssumptions
 - teamModel
 - probability
 - scoreDistribution
@@ -17,8 +18,9 @@
 
 1. JSON 必须合法。
 2. probability.homeWin + probability.draw + probability.awayWin 必须等于 100。
-3. 只包含专业预测字段，不添加传播文案字段。
-4. 不添加非分析性总结。
-5. 如果数据不足，在 dataEvidence 和 uncertaintyFactors 中写明缺失项。
-6. highThreatSequences 中每个回合必须包含 startMinute、endMinute、team、attackType、threatLevel、initiation、progression、keyAction、defensiveResponse、finish、rationale。
-7. goalChains 中每个进球必须包含 minuteRange、team、goalMethod、xgQuality、defensiveError、initiation、progression、keyAction、finish、rationale。
+3. modelAssumptions 必须包含 homeExpectedGoals、awayExpectedGoals、homeAvailabilityGoalAdjustment、awayAvailabilityGoalAdjustment、specialFactors、tacticalFactors、modelType、sampleWindow、dataCutoff、marketCheck、calibration、publicConsensusCalibration、calibrationNotes。
+4. 只包含专业预测字段，不添加传播文案字段。
+5. 不添加非分析性总结。
+6. 如果数据不足，在 dataEvidence、modelAssumptions 和 uncertaintyFactors 中写明缺失项。
+7. highThreatSequences 中每个回合必须包含 startMinute、endMinute、team、attackType、threatLevel、initiation、progression、keyAction、defensiveResponse、finish、rationale。
+8. goalChains 中每个进球必须包含 minuteRange、team、goalMethod、xgQuality、defensiveError、initiation、progression、keyAction、finish、rationale。
