@@ -19,6 +19,7 @@
 - 说明期望进球如何由近期 xG、赛季基线、对手防守、Elo/排名、阵容、主客/中立、休息和战术调整得到。
 - 必须说明能上场人数/缺阵主力如何进入 homeAvailabilityGoalAdjustment / awayAvailabilityGoalAdjustment。
 - 必须说明常规主力比例、俱乐部过去一年表现、连续比赛强度如何影响 staminaProfile 和 tacticalCoherence。
+- 必须说明球员数据来源质量：哪些来自 API/人工核验，哪些是 estimated/missing。
 - 必须说明每场特殊因素如何进入 goalAdjustment、tempoMultiplier、volatilityDelta。
 - 必须说明临场指挥、替补深度、定位球攻防、点球/VAR 如何进入 tacticalMatchGoalAdjustment 和 volatility。
 - 如果有历史回测或同赛事校准结果，给出 temperature、Brier、log loss、ECE；没有则写缺失，不要假造。

@@ -13,6 +13,58 @@
   },
   "home": {
     "name": "",
+    "dataProvenance": {
+      "availability": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "lineup": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "injuries": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "clubMinutes": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "clubPerformance": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "keyPlayerImpact": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "goalkeeper": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "tactical": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "setPieces": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "penalties": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      }
+    },
     "recentXgFor": null,
     "recentXgAgainst": null,
     "proxyXgFor": null,
@@ -66,6 +118,58 @@
   },
   "away": {
     "name": "",
+    "dataProvenance": {
+      "availability": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "lineup": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "injuries": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "clubMinutes": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "clubPerformance": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "keyPlayerImpact": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "goalkeeper": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "tactical": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "setPieces": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      },
+      "penalties": {
+        "sourceType": "api/manual/estimated/missing",
+        "sourceName": "",
+        "confidence": "high/medium/low"
+      }
+    },
     "recentXgFor": null,
     "recentXgAgainst": null,
     "proxyXgFor": null,

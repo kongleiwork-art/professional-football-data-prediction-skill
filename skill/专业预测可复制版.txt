@@ -48,6 +48,15 @@
 
 如果数据缺失，不要编造。请明确写出缺失项，并降低相关判断的确定性。
 
+球员数据来源必须标注：
+
+- api：来自 API 或结构化数据源
+- manual：人工核验公开来源
+- estimated：模型/人工估计
+- missing：缺失
+
+尤其是 clubMinutes、clubPerformance、keyPlayerImpact、goalkeeper、tactical、setPieces、penalties。estimated/missing 较多时，必须降低模型置信度。
+
 xG 缺失时，不要只写“保守估计”。必须按以下梯子处理：
 
 1. direct_xG：优先使用 FBref、Understat、FotMob、Sofascore、WhoScored、Opta/官方报告的 xG/xGA。

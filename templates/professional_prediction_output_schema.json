@@ -37,6 +37,28 @@
     "dataCutoff": "",
     "xgInputTier": "direct_xG/proxy_xG/goals_regressed_xG/strength_prior_only",
     "xgFallbackNotes": [],
+    "homeDataQuality": {
+      "confidence": "high/medium/low",
+      "sourceTypeCounts": {
+        "api": 0,
+        "manual": 0,
+        "estimated": 0,
+        "missing": 0,
+        "unknown": 0
+      },
+      "notes": []
+    },
+    "awayDataQuality": {
+      "confidence": "high/medium/low",
+      "sourceTypeCounts": {
+        "api": 0,
+        "manual": 0,
+        "estimated": 0,
+        "missing": 0,
+        "unknown": 0
+      },
+      "notes": []
+    },
     "homeExpectedGoals": 0,
     "awayExpectedGoals": 0,
     "homeAvailabilityGoalAdjustment": 0,

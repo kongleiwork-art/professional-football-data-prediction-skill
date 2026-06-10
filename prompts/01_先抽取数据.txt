@@ -83,6 +83,7 @@
 - 如果可以联网，请优先使用最新公开数据。
 - 优先官方来源、FBref/Understat/FotMob/Sofascore/WhoScored、ClubElo/FIFA、Football-Data.co.uk、可靠新闻源。
 - 阵容可用性必须尽量拆成 availablePlayers、unavailableStarters、doubtfulStarters、unavailableAttackers/Midfielders/Defenders。
+- 球员数据必须标注 sourceType：api/manual/estimated/missing；尤其是 clubMinutes、clubPerformance、keyPlayerImpact、goalkeeper、setPieces、penalties。
 - 特殊因素必须标注 confirmed / assumed / missing；不要编造裁判、球场或天气。
 - 如果不能联网，请明确说明哪些数据无法确认。
 - 不要编造具体数值。

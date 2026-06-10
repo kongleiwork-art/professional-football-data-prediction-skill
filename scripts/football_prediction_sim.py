@@ -39,6 +39,57 @@ def has_number(data: dict[str, Any], key: str) -> bool:
         return False
 
 
+def data_quality(team: dict[str, Any], side: str) -> dict[str, Any]:
+    provenance = team.get("dataProvenance", {})
+    if not isinstance(provenance, dict):
+        provenance = {}
+
+    tracked = [
+        "availability",
+        "lineup",
+        "injuries",
+        "clubMinutes",
+        "clubPerformance",
+        "keyPlayerImpact",
+        "goalkeeper",
+        "tactical",
+        "setPieces",
+        "penalties",
+    ]
+    counts = {"api": 0, "manual": 0, "estimated": 0, "missing": 0, "unknown": 0}
+    notes: list[str] = []
+    for field in tracked:
+        meta = provenance.get(field, {})
+        if isinstance(meta, str):
+            source_type = meta
+            confidence = "unknown"
+        elif isinstance(meta, dict):
+            source_type = str(meta.get("sourceType", "unknown"))
+            confidence = str(meta.get("confidence", "unknown"))
+        else:
+            source_type = "unknown"
+            confidence = "unknown"
+        source_type = source_type if source_type in counts else "unknown"
+        counts[source_type] += 1
+        if source_type in {"estimated", "missing", "unknown"}:
+            notes.append(f"{side}.{field}: {source_type}/{confidence}")
+
+    usable = counts["api"] + counts["manual"]
+    weak = counts["estimated"] + counts["missing"] + counts["unknown"]
+    if weak >= 6:
+        confidence = "low"
+    elif weak >= 3:
+        confidence = "medium"
+    else:
+        confidence = "high"
+
+    return {
+        "confidence": confidence,
+        "sourceTypeCounts": counts,
+        "notes": notes,
+    }
+
+
 def poisson(k: int, lam: float) -> float:
     return math.exp(-lam) * (lam**k) / math.factorial(k)
 
@@ -641,6 +692,8 @@ def main() -> int:
     away = payload.get("away", {})
     context = payload.get("context", {})
     market = payload.get("market", {})
+    home_quality = data_quality(home, "home")
+    away_quality = data_quality(away, "away")
 
     max_goals = int(fnum(context, "maxGoals", 8))
     dc_rho = clamp(fnum(context, "dixonColesRho", 0.0), -0.25, 0.25)
@@ -660,6 +713,8 @@ def main() -> int:
         "model": {
             "homeTeam": home.get("name", "Home"),
             "awayTeam": away.get("name", "Away"),
+            "homeDataQuality": home_quality,
+            "awayDataQuality": away_quality,
             "homeExpectedGoals": round(home_lam, 3),
             "awayExpectedGoals": round(away_lam, 3),
             "homeXgInputTier": home_estimate["xgInputTier"],
