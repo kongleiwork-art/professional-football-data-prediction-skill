@@ -36,6 +36,7 @@
 ├── SKILL.md
 ├── scripts/
 │   └── football_prediction_sim.py
+│   └── fetch_match_context.py
 │   └── calibrate_probabilities.py
 │   └── backtest_predictions.py
 │   └── shot_xg_proxy.py
@@ -81,6 +82,20 @@
 ```
 
 ## Reproducible Probability Helper
+
+可先用免费/免费额度 API 拉取基础上下文：
+
+```bash
+python3 scripts/fetch_match_context.py --home Portugal --away Nigeria --date 2026-06-10 --venue Lisbon
+```
+
+支持：
+
+- Open-Meteo：免费无 key，天气/海拔。
+- football-data.org：免费额度，需要 `FOOTBALL_DATA_API_TOKEN`。
+- The Odds API：免费额度，需要 `THE_ODDS_API_KEY`。
+
+复制 `.env.example` 到 `.env` 保存本地 key，不要提交真实 key。
 
 如果已经有结构化输入，可以填 `templates/match_input_template.json` 后运行：
 

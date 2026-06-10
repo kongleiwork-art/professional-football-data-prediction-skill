@@ -1,4 +1,5 @@
 .DS_Store
+.env
 *.zip
 node_modules/
 .cache/

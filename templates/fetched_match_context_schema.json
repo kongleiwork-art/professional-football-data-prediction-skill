@@ -1,0 +1,43 @@
+{
+  "match": {
+    "homeTeam": "",
+    "awayTeam": "",
+    "date": "",
+    "time": "",
+    "competition": "",
+    "venue": "",
+    "homeNeutralAway": ""
+  },
+  "home": {
+    "name": ""
+  },
+  "away": {
+    "name": ""
+  },
+  "context": {
+    "neutralVenue": false,
+    "homeAdvantageGoals": 0.12,
+    "leagueAverageGoalsPerTeam": 1.35,
+    "tempoMultiplier": 1,
+    "specialFactors": {
+      "weatherSeverity": "normal",
+      "altitudeMeters": 0,
+      "awayTravelFatigue": 0
+    }
+  },
+  "market": {
+    "homeOdds": null,
+    "drawOdds": null,
+    "awayOdds": null,
+    "weight": 0
+  },
+  "sources": [
+    {
+      "name": "",
+      "status": "ok/missing/error",
+      "url": "",
+      "retrievedAt": "",
+      "notes": ""
+    }
+  ]
+}

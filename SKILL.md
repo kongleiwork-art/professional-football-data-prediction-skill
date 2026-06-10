@@ -42,6 +42,8 @@ Always work in this order:
 
 When the user asks for more professional data analysis, add one or more layers from `docs/专业数据分析参考.md`: shot-level xG, VAEP/action value, set-piece profile, low-score calibration, or visual evidence.
 
+For free/free-tier API ingestion, use `scripts/fetch_match_context.py`. It supports Open-Meteo without a key, plus optional football-data.org and The Odds API keys. Treat API output as input context, not final prediction.
+
 ## Required Data Inputs
 
 Prioritize current, verifiable match data:
